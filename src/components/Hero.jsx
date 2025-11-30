@@ -2,11 +2,10 @@ const Hero = () =>{
     return (
         <div className="hero container">
             <div className="hero-content">
-                <h1>YOUR FEET 
-                    DESERVE 
-                    THE BEST
+                <h1>For Those Who Respect the Boogeyman.
                     </h1>
-                    <p>YOUR FEET DESERVE THE BEST AND WE’RE HERE TO HELP YOU WITH OUR SHOES.YOUR FEET DESERVE THE BEST AND WE’RE HERE TO HELP YOU WITH OUR SHOES.</p>
+                    <p>Unlock premium John Wick–inspired gear crafted for precision, style, and absolute focus.
+Suit up. Stand out. Become a legend.</p>
                     <div className="hero-btn">
                         <button>Shop Now</button>
                         <button className="Secondry-btn">Category</button>
@@ -20,7 +19,7 @@ const Hero = () =>{
                     </div>
             </div>
             <div className="hero-image">
-                <img src="public\images\shoe_image.png" alt="" />
+                <img src="public\images\john-wick.png" alt="" className="john-wick"/>
             </div>
             
         </div>
