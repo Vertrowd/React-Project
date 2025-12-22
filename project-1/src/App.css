@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+}
+
+body{
+    font-family: "Poppins",sans-serif;
+    /* background-color: yellowgreen; */
+}
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+:root{
+    --red:#D01C28;
+    --grey:#2e2e2e;
+}
+nav {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    height: 72px;
+    align-items: center;
+}
+.login-btn{
+    all:unset;
+    padding: 6px 16px;
+    border-radius: 66px;
+    width: 74px;
+    text-align: center;
+    background: var(--red);
+    height: 32px;
+    color: white;
+    font-weight: 500;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 34px;
+}
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    padding-top: 40px;
+}
+.image{
+    height: 63px;
+    width: 73px;
+}
+
+.hero{
+    display: flex;
+    align-items: center;
+    height: calc(100vh-72px);
+    overflow: hidden;
+}
+.hero img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.john-wick{
+    margin-top: 5px;
+    padding-right: 100px;
+    
+}
+ .hero h1{
+    font-size: 80px;
+    font-weight: 800;
+    line-height: 102px;
+    font-family: 'Times New Roman', Times, serif;
+ }
+
+ .hero p{
+    font-weight: 600;
+    color: var(--grey);
+    max-width: 400px;
+    
+ }
+button{
+    all:unset;
+    padding: 6px 16px;
+    background: var(--red);
+    height: 32px;
+    color: white;
+    font-weight: 500;
+}
+ .hero-btn{
+    display: flex;
+    gap: 40px;
+    
+ }
+ .Secondry-btn{
+    background: transparent;
+    color: var(--grey);
+    border: 1px solid;
+ }
+ .shopping p{
+    margin-bottom: 10px;
+    font-size: 14px;
+ }
+ .shopping-icons{
+    gap: 16px;
+    display: flex;
+ }
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+    height: auto;
+    padding: 40px 20px;
+  }
+.john-wick{
+    width: 336px;
+    height: 594px;
+}
+  .hero h1 {
+    font-size: 70px;
+    line-height: 70px;
+  }
+
+  nav ul {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  nav {
+    padding: 10px 0;
+  }
+
+  nav ul {
+    display: none;   
+  }
+
+  .hero {
+    flex-direction: column;
+    height: auto;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 45px;
+    line-height: 48px;
+  }
+
+  .hero p {
+    max-width: 100%;
+    font-size: 14px;
+  }
+
+  .hero-btn {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  button,
+  .login-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .shopping-icons img {
+    height: 30px;
+    width: 30px;
+  }
+}
