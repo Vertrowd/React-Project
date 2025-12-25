@@ -3,44 +3,37 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #0f172a;
+  background: #020617;
   color: white;
 }
 
-.bulb-container {
+.cart {
+  background: #0f172a;
+  padding: 30px;
+  border-radius: 12px;
   text-align: center;
 }
 
-.bulb {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  margin: 20px auto;
-  transition: all 0.3s ease;
+.controls {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
 }
 
-.bulb.off {
-  background: #1e293b;
-  box-shadow: none;
-}
-
-.bulb.on {
-  background: #fde047;
-  box-shadow: 
-    0 0 20px #fde047,
-    0 0 40px #fde047,
-    0 0 60px #fde047;
-}
-
-.switch {
-  padding: 10px 20px;
-  background: #38bdf8;
+button {
+  padding: 10px 16px;
+  background: #22c55e;
   border: none;
   border-radius: 6px;
-  font-size: 16px;
+  font-size: 15px;
   cursor: pointer;
 }
 
-.switch:hover {
-  background: #0ea5e9;
+button:last-child {
+  background: #ef4444;
+}
+
+button:hover {
+  opacity: 0.85;
 }

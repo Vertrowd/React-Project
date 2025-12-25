@@ -4,36 +4,34 @@ import "./App.css";
 function App() {
   return (
     <div className="app">
-      <LightBulb />
+      <Cart />
     </div>
   );
 }
 
-function LightBulb() {
-  const [bulbOn, setBulbOn] = useState(false);
+function Cart() {
+  const [items, setItems] = useState(0);
 
   return (
-    <div className="bulb-container">
-      <Bulb bulbOn={bulbOn} />
-      <Switch bulbOn={bulbOn} setBulbOn={setBulbOn} />
+    <div className="cart">
+      <CartDisplay items={items} />
+      <CartControls setItems={setItems} />
     </div>
   );
 }
 
-function Bulb({ bulbOn }) {
-  return (
-    <div className={`bulb ${bulbOn ? "on" : "off"}`} />
-  );
+function CartDisplay({ items }) {
+  return <h2>🛒 Items in Cart: {items}</h2>;
 }
 
-function Switch({ bulbOn, setBulbOn }) {
+function CartControls({ setItems }) {
   return (
-    <button
-      className="switch"
-      onClick={() => setBulbOn(prev => !prev)}
-    >
-      {bulbOn ? "Turn OFF" : "Turn ON"}
-    </button>
+    <div className="controls">
+      <button onClick={() => setItems(i => i + 1)}>Add Item</button>
+      <button onClick={() => setItems(i => Math.max(0, i - 1))}>
+        Remove Item
+      </button>
+    </div>
   );
 }
 
