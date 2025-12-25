@@ -21,7 +21,7 @@ function Cart() {
 }
 
 function CartDisplay({ items }) {
-  return <h2>🛒 Items in Cart: {items}</h2>;
+  return <h2>Items in Cart: {items}</h2>;
 }
 
 function CartControls({ setItems }) {
