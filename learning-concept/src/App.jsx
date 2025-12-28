@@ -1,38 +1,30 @@
-import { useState } from "react";
-import "./App.css";
+import React, { useState } from 'react'
+function useCounter(){
+  const [count , setCount]=useState(0)
 
-function App() {
+  function increasecount(){
+    setCount(count+1)
+  }
+  return {
+    count:count,
+    increasecount:increasecount
+  }
+}
+const App = () => {
   return (
-    <div className="app">
-      <Cart />
-    </div>
-  );
+    
+  <><Counter /></>
+  )
 }
 
-function Cart() {
-  const [items, setItems] = useState(0);
-
-  return (
-    <div className="cart">
-      <CartDisplay items={items} />
-      <CartControls setItems={setItems} />
-    </div>
-  );
+function Counter(){
+  const {count, increasecount}=useCounter()
+  return (<>
+  <div>
+  <button onClick={increasecount}>Increase {count}</button>
+  </div>
+  </>)
+  
 }
 
-function CartDisplay({ items }) {
-  return <h2>Items in Cart: {items}</h2>;
-}
-
-function CartControls({ setItems }) {
-  return (
-    <div className="controls">
-      <button onClick={() => setItems(i => i + 1)}>Add Item</button>
-      <button onClick={() => setItems(i => Math.max(0, i - 1))}>
-        Remove Item
-      </button>
-    </div>
-  );
-}
-
-export default App;
+export default App
